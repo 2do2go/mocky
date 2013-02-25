@@ -1,0 +1,22 @@
+{
+	"name": "mocker",
+	"description": "http mocking server with simple config written on nodejs",
+	"version": "0.1.0",
+	"author": "Oleg Korobenko <oleg.korobenko@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/okv/mocker.git"
+	},
+	"keywords": [
+		"mock", "mocking", "http", "test", "nock"
+	],
+	"scripts": {
+		"test": "node_modules/mocha/bin/mocha --reporter spec"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"mocha": "1.8.1",
+		"expect.js": "0.2.0"
+	}
+}
