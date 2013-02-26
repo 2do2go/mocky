@@ -13,18 +13,18 @@ describe('mocker', function() {
 			routes: [{
 				url: '/someurl?a=b&c=d',
 				method: 'POST',
-				req: 'POST request body to match',
-				res: 'response to return to client'
+				req: {body: 'POST request body to match'},
+				res: {body: 'response to return to client'}
 			}, {
 				url: '/someurl?a=b&c=d',
 				method: 'GET',
-				res: 'response for GET request'
+				res: {body: 'response for GET request'}
 			}, {
 				url: '/someurl?a=b&c=d',
 				method: 'PUT',
-				req: 'PUT request body to match',
+				req: {body: 'PUT request body to match'},
 				res: function(req, reqBody) {
-					return '[ ' + reqBody + ' ]';
+					return {body: '[ ' + reqBody + ' ]'};
 				}
 			}],
 			logLevel: 'none'
