@@ -9,24 +9,23 @@ var expect = require('expect.js'),
 describe('mocky', function() {
 	var firstRoute
 	it('start without errors', function() {
-		mocky.createServer({
-			routes: [{
-				url: '/someurl?a=b&c=d',
-				method: 'POST',
-				req: {body: 'POST request body to match'},
-				res: {body: 'response to return to client'}
-			}, {
-				url: '/someurl?a=b&c=d',
-				method: 'GET',
-				res: {body: 'response for GET request'}
-			}, {
-				url: '/someurl?a=b&c=d',
-				method: 'PUT',
-				req: {body: 'PUT request body to match'},
-				res: function(req, reqBody) {
-					return {body: '[ ' + reqBody + ' ]'};
-				}
-			}],
+		mocky.createServer([{
+			url: '/someurl?a=b&c=d',
+			method: 'GET',
+			res: {body: 'response for GET request'}
+		}, {
+			url: '/someurl?a=b&c=d',
+			method: 'POST',
+			req: {body: 'POST request body to match'},
+			res: {body: 'response to return to client'}
+		}, {
+			url: '/someurl?a=b&c=d',
+			method: 'PUT',
+			req: {body: 'PUT request body to match'},
+			res: function(req, reqBody) {
+				return {body: '[ ' + reqBody + ' ]'};
+			}
+		}], {
 			logLevel: 'none'
 		}).listen(listen.port, listen.host);
 	});
