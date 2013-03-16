@@ -51,3 +51,8 @@ into cloned repository run
 ```
 npm test
 ```
+
+## TODO
+* improve server logging
+* support request, response headers
+* tool for auto capturing routes from working app
