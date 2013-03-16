@@ -1,1 +1,1 @@
-module.exports = require('./lib/mocker');
+module.exports = require('./lib/mocky');

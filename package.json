@@ -1,11 +1,11 @@
 {
-	"name": "mocker",
+	"name": "mocky",
 	"description": "http mocking server with simple config written on nodejs",
 	"version": "0.1.0",
 	"author": "Oleg Korobenko <oleg.korobenko@gmail.com>",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/okv/mocker.git"
+		"url": "git://github.com/okv/mocky.git"
 	},
 	"keywords": [
 		"mock", "mocking", "http", "test", "nock"

@@ -1,15 +1,15 @@
 'use strict';
 
 var expect = require('expect.js'),
-	mocker = require('../'),
+	mocky = require('../'),
 	http = require('http'),
 	listen = {host: '127.0.0.1', port: 4321};
 
 
-describe('mocker', function() {
+describe('mocky', function() {
 	var firstRoute
 	it('start without errors', function() {
-		mocker.createServer({
+		mocky.createServer({
 			routes: [{
 				url: '/someurl?a=b&c=d',
 				method: 'POST',
