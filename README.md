@@ -12,7 +12,7 @@ npm install mocky
 
 create new mock.js file with content
 
-```
+```javascript
 var mocky = require('mocky');
 
 mocky.createServer([{
