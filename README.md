@@ -16,21 +16,21 @@ create new mock.js file with content
 var mocky = require('mocky');
 
 mocky.createServer([{
-//simple get route without request body to match
+//simple GET route without request body to match
 	url: '/someurl?a=b&c=d',
 	method: 'GET',
-	res: {body: 'response for GET request'}
+	res: 'response for GET request'
 }, {
-//post route with body to match
+//POST route with body to match
 	url: '/someurl?a=b&c=d',
 	method: 'POST',
-	req: {body: 'POST request body to match'},
-	res: {body: 'response to return to client'}
+	req: 'POST request body to match',
+	res: 'response to return to client'
 }, {
-//put route with dynamic response body
+//PUT route with dynamic response body
 	url: '/someurl?a=b&c=d',
 	method: 'PUT',
-	req: {body: 'PUT request body to match'},
+	req: 'PUT request body to match',
 	res: function(req, reqBody) {
 		return {body: '[ ' + reqBody + ' ]'};
 	}
