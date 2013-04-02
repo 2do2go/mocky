@@ -32,7 +32,7 @@ mocky.createServer([{
 	method: 'PUT',
 	req: 'PUT request body to match',
 	res: function(req, reqBody) {
-		return {body: '[ ' + reqBody + ' ]'};
+		return '[ ' + reqBody + ' ]';
 	}
 }]).listen(4321);
 
