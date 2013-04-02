@@ -5,7 +5,6 @@ var expect = require('expect.js'),
 	http = require('http'),
 	listen = {host: '127.0.0.1', port: 4321};
 
-
 describe('mocky', function() {
 	var firstRoute
 	it('start without errors', function() {

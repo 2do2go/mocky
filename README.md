@@ -12,7 +12,7 @@ npm install mocky
 
 create new mock.js file with content
 
-```javascript
+```js
 var mocky = require('mocky');
 
 mocky.createServer([{
@@ -44,6 +44,17 @@ get `response for GET request` to the client, send `POST` request to
 `http://127.0.0.1:4321/someurl?a=b&c=d` with body `POST request body to match`
 ... and so on, just try it.
 
+## Request recording
+
+it's very handy to auto record requests, do it somewhere at start of your main
+app file
+
+```js
+mocky.recorder.start();
+```
+
+after that all http/https requests will be logged into console
+
 ## Running test
 
 into cloned repository run
@@ -55,4 +66,3 @@ npm test
 ## TODO
 * improve server logging
 * support request, response headers
-* tool for auto capturing routes from working app
