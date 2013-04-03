@@ -44,7 +44,7 @@ get `response for GET request` to the client, send `POST` request to
 `http://127.0.0.1:4321/someurl?a=b&c=d` with body `POST request body to match`
 ... and so on, just try it.
 
-## Request recording
+## Requests recording
 
 it's very handy to auto record requests, do it somewhere at start of your main
 app file
