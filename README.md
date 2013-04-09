@@ -50,10 +50,20 @@ it's very handy to auto record requests, do it somewhere at start of your main
 app file
 
 ```js
-mocky.recorder.start();
+mocky.recorder.start({print: true});
 ```
 
-after that all http/https requests will be logged into console
+after that all http/https requests will be logged into console immediately after
+execution.
+
+You also can manually control `recorder` - `start` recorder then after some
+requests occures you can manually process recorder `outputs` e.g.
+
+```js
+console.log(mocky.recorder.outputs)
+```
+
+you also can `stop` recorder and `clear` outputs.
 
 ## Running test
 
