@@ -24,6 +24,10 @@ describe('mocky', function() {
 			res: function(req, reqBody) {
 				return {body: '[ ' + reqBody + ' ]'};
 			}
+		}, {
+			url: /\/someurl\?a=\d+/i,
+			method: 'GET',
+			res: {body: 'response for route with regexp'}
 		}], {
 			logLevel: 'none'
 		}).listen(listen.port, listen.host);
@@ -55,6 +59,15 @@ describe('mocky', function() {
 			data: 'PUT request body to match'
 		}, function(err, res) {
 			expectResponseData(err, res, '[ PUT request body to match ]', done);
+		});
+	});
+
+	it('respond from route with regexp', function(done) {
+		request({
+			path: '/someurl?a=123',
+			method: 'GET'
+		}, function(err, res) {
+			expectResponseData(err, res, 'response for route with regexp', done);
 		});
 	});
 });

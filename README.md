@@ -34,6 +34,11 @@ mocky.createServer([{
 	res: function(req, reqBody) {
 		return '[ ' + reqBody + ' ]';
 	}
+}, {
+//GET route with regexp url instead of string
+	url: /\/someurl\?a=\d+/,
+	method: 'GET',
+	res: 'response from route with regexp in url'
 }]).listen(4321);
 
 ```
