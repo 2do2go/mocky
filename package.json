@@ -1,7 +1,7 @@
 {
 	"name": "mocky",
 	"description": "http mocking server with simple config written on nodejs",
-	"version": "0.1.9",
+	"version": "0.1.8",
 	"author": "Oleg Korobenko <oleg.korobenko@gmail.com>",
 	"repository": {
 		"type": "git",
