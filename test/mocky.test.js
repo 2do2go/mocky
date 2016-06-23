@@ -7,8 +7,7 @@ var expect = require('expect.js'),
 
 var recorderData = [{
 	url: '/rectesturl1',
-	method: 'get',
-	req: 'recorded GET test url #1'
+	method: 'get'
 }, {
 	url: '/rectesturl2',
 	method: 'post',
@@ -16,7 +15,10 @@ var recorderData = [{
 }, {
 	url: '/rectesturl3',
 	method: 'put',
-	req: 'recorded PUT test url #1'
+	req: 'recorded PUT test url #3'
+}, {
+	url: '/rectesturl4',
+	method: 'delete'
 }];
 
 describe('Mocky', function() {
@@ -66,7 +68,7 @@ describe('Mocky', function() {
 						});
 					}, 200);
 				}
-			},{
+			}, {
 				url: '/testurl8',
 				method: 'post',
 				req: 'testurl8 req'
@@ -114,6 +116,10 @@ describe('Mocky', function() {
 				res: function(req, res) {
 					return req.method + ' testurl15 res';
 				}
+			}, {
+				url: '/testurl16',
+				method: 'delete',
+				req: {}
 			}], {
 				logLevel: 'none'
 			}).listen(listen.port, listen.host);
@@ -285,6 +291,16 @@ describe('Mocky', function() {
 				expectResponseData(err, res, {body: 'PUT testurl15 res'}, done);
 			});
 		});
+
+		it('DELETE /testurl16 empty req', function(done) {
+			request({
+				path: '/testurl16',
+				method: 'delete',
+				req: ''
+			}, function(err, res) {
+				expectResponseData(err, res, {}, done);
+			});
+		});
 	});
 
 	describe('recorder', function() {
@@ -299,7 +315,7 @@ describe('Mocky', function() {
 					method: reqData.method,
 					body: reqData.req
 				}, function(err, res) {
-					if (++counter === 3) done();
+					if (++counter === 4) done();
 				});
 			});
 		});
