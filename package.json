@@ -2,10 +2,10 @@
 	"name": "mocky",
 	"description": "http mocking server with simple config written on nodejs",
 	"version": "0.1.9",
-	"author": "Oleg Korobenko <oleg.korobenko@gmail.com>",
+	"author": "2do2go team <dev.2do2go@gmail.com>",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/okv/mocky.git"
+		"url": "git://github.com/2do2go/mocky.git"
 	},
 	"keywords": [
 		"mock", "mocking", "http", "test", "nock"
