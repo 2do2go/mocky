@@ -2,6 +2,8 @@
 
 mocky - http mocking server with simple config written on nodejs
 
+[![Build Status](https://travis-ci.org/2do2go/mocky.svg?branch=master)](https://travis-ci.org/2do2go/mocky)
+
 ## Installation
 
 ```
