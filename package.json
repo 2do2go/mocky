@@ -11,7 +11,7 @@
 		"mock", "mocking", "http", "test", "nock"
 	],
 	"scripts": {
-		"test": "node_modules/mocha/bin/mocha --reporter spec"
+		"test": "mocha --reporter spec"
 	},
 	"dependencies": {
 	},
