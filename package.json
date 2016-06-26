@@ -1,22 +1,25 @@
 {
-	"name": "mocky",
-	"description": "http mocking server with simple config written on nodejs",
-	"version": "0.1.9",
-	"author": "2do2go team <dev.2do2go@gmail.com>",
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/2do2go/mocky.git"
-	},
-	"keywords": [
-		"mock", "mocking", "http", "test", "nock"
-	],
-	"scripts": {
-		"test": "mocha --reporter spec"
-	},
-	"dependencies": {
-	},
-	"devDependencies": {
-		"mocha": "1.8.1",
-		"expect.js": "0.2.0"
-	}
+  "name": "mocky",
+  "description": "http mocking server with simple config written on nodejs",
+  "version": "0.1.9",
+  "author": "2do2go team <dev.2do2go@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/2do2go/mocky.git"
+  },
+  "keywords": [
+    "mock",
+    "mocking",
+    "http",
+    "test",
+    "nock"
+  ],
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "expect.js": "0.2.0",
+    "mocha": "1.8.1"
+  }
 }
